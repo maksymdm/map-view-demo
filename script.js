@@ -209,7 +209,7 @@ map.on('load', () => {
     photoWrapper.className = 'marker-photo';
 
     const img = document.createElement('img');
-    img.src = '/map-view/resources/avatar.jpeg';
+    img.src = './resources/avatar.jpeg';
     img.className = 'marker-image';
 
     photoWrapper.appendChild(img);
