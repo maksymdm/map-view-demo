@@ -95,8 +95,6 @@ function createLightBeam() {
     return new THREE.Mesh(geometry, material);
 }
 
-
-
 const modelUrl = "/map-view/resources/waypoint.glb"
 
 const modelOrigin = testCoordinate;
@@ -204,6 +202,23 @@ const customLayer = {
 };
 
 map.on('load', () => {
+    const el = document.createElement('div');
+    el.className = 'custom-marker';
+
+    const photoWrapper = document.createElement('div');
+    photoWrapper.className = 'marker-photo';
+
+    const img = document.createElement('img');
+    img.src = '/map-view/resources/avatar.jpeg';
+    img.className = 'marker-image';
+
+    photoWrapper.appendChild(img);
+    el.appendChild(photoWrapper);
+
+    new maplibregl.Marker({ element: el, anchor: 'bottom' })
+        .setLngLat([30.51070989, 50.41739641])
+        .addTo(map);
+
     map.addLayer(customLayer);
 });
 

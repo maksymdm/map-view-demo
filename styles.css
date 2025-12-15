@@ -1,0 +1,29 @@
+.custom-marker {
+    width: 48px;
+    height: 72px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='72' viewBox='0 0 48 72'%3E%3Cpath d='M24 0C11.85 0 2 9.85 2 22c0 17 22 50 22 50s22-33 22-50C46 9.85 36.15 0 24 0z' fill='white'/%3E%3C/svg%3E");
+    background-size: cover;
+    position: relative;
+    cursor: pointer;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.25));
+}
+
+.marker-photo {
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: white;         /* white frame */
+    padding: 2px;              /* thin white border */
+    box-sizing: border-box;
+}
+
+.marker-photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
